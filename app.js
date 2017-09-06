@@ -22,15 +22,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/app/public'));
 
-// build mongo database connection url //
-
-var dbHost = 'localhost'
-var dbPort = 5432;
-var dbName = 'postgres';
-
-var dbURL = '';
-
-
 require('./app/server/routes')(app);
 
 app.listen(app.get('port'), function() {
