@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Login Form</title>
+
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/form-login.css">
+
+</head>
+
+
+	<header>
+		<h1>Web monitoring tool</h1>
+    </header>
+
+
+    <div class="main-content">
+
+
+        <form class="form-login" method="post" action="/login">
+
+            <div class="form-log-in-with-email">
+
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1>Log in</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Username</span>
+                            <input type="text" name="username">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Password</span>
+                            <input type="password" name="password">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit">Log in</button>
+                    </div>
+										<div>
+											<p><%= error %> </p>
+										</div>
+
+                </div>
+
+                <a href="/register">Create an account &rarr;</a>
+
+            </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

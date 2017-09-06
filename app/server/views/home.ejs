@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+	<title>Registration Form</title>
+
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/form-register.css">
+
+</head>
+
+	<header>
+		<h1>Monitoring tool</h1>
+		<div align="right">
+			<a  href="/logout" class="form-log-out">Logout</a>
+</div>
+    </header>
+
+
+    <div class="main-content">
+
+
+        <form class="form-register" action="#">
+
+            <div class="form-register-with-email">
+
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1 align="center">User Profile</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Name</span>
+                        </label>
+												<label>
+                            <span><%= name	 %></span>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Username</span>
+                        </label>
+												<label>
+                            <span><%= username %></span>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label align="center">
+                            <span>Login History</span>
+                        </label>
+												<div align="center">
+													<p><%- logHistory %> </p>
+												</div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

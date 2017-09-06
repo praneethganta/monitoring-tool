@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+	<title>Registration Form</title>
+
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/form-register.css">
+
+</head>
+
+	<header>
+		<h1>Monitoring tool</h1>
+    </header>
+
+
+    <div class="main-content">
+
+        <!-- You only need this form and the form-register.css -->
+
+        <form class="form-register" method="post" action="register">
+
+            <div class="form-register-with-email">
+
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1>Create an account</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Username</span>
+                            <input type="text" name="username">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Password</span>
+                            <input type="password" name="password">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit">Register</button>
+                    </div>
+										<div>
+											<p><%= error %> </p>
+										</div>
+
+                </div>
+
+                <a href="/" class="form-log-in-with-existing">Already have an account? Login here &rarr;</a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
