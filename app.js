@@ -14,7 +14,7 @@ var cookieParser = require('cookie-parser');
 var app = express();
 
 app.locals.pretty = true;
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8000);
 app.set('views', __dirname + '/app/server/views');
 app.set('view engine', 'ejs');
 app.use(cookieParser());
@@ -33,4 +33,6 @@ var dbURL = '';
 
 require('./app/server/routes')(app);
 
-app.listen(8000);
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
