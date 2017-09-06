@@ -30,12 +30,9 @@
     "pg": "^7.3.0",
     "stylus": "0.52.4"
   },
-  "engines": {
-    "node": "4.2.1"
-  },
   "main": "app.js",
   "scripts": {
-    "start": "nodejs app.js"
+    "start": "node app.js"
   },
   "homepage": "",
   "devDependencies": {},
