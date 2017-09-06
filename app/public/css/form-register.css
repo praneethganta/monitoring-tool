@@ -114,3 +114,11 @@ html{
     font-weight: normal;
     color: #FFFFFF;
 }
+
+
+.form-stack-overflow{
+    text-decoration: none;
+    padding: 4px 8px;
+    font-weight: normal;
+    color: #000000;
+}
