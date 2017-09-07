@@ -52,17 +52,34 @@ module.exports = function(app) {
 		if (req.cookies.user == undefined || req.cookies.pass == undefined){
 			res.redirect('/');
 		}	else{
+			var activity;
+			var tableCode= "";
+			var name = ""
+			var username = "";
 			AM.getAccountByUsername(req.cookies.user, function(result){
+				name = result["name"];
+				username = result["username"];
 				activity = result["activity"].split(";")
-				tableCode= "<table>"
 				for (i = 0; i< activity.length; i++)
 				{
-					tableCode = tableCode + "<tr><td>" + activity[i] + "</td></tr>";
+					if (i == activity.length - 1)
+					tableCode = tableCode + "    "+ activity[i] + "    ";
+					else
+					tableCode = tableCode + "    "+ activity[i] + "    \n";
 				}
-				tableCode = tableCode + "</table>"
-				res.render('home', {name : result["name"],username : result["username"],logHistory : tableCode});
-
+				AM.getuserActivity(req.cookies.user, function(result){
+					var behavior = "";
+					for(i=0;i<result.length;i++) {
+						if(i == result.length - 1)
+						behavior = behavior + result[i]["timestamp"] + "     " + result[i]["activity"] + " "
+						else
+						behavior = behavior + result[i]["timestamp"] + "     " + result[i]["activity"] + " \n"
+					}
+					res.render('home', {name : name,username : username,logHistory : tableCode, behaviorHistory: behavior});
+				});
+				//res.render('home', {name : name,username : username,logHistory : tableCode, behaviorHistory: ""});
 			});
+
 		}
 	});
 

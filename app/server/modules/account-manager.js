@@ -78,6 +78,16 @@ exports.addNewAccount = function(newData, callback)
 });
 }
 
+exports.getuserActivity = function(username, callback) {
+  const query = client.query('SELECT * FROM user_activity WHERE username = $1',[username], (err,res) => {
+		if (err) {
+	console.log(err.stack)
+} else {
+	callback(res.rows);
+}
+	});
+}
+
 // This DB service looks for the user details in the DB based on username //
 
 exports.getAccountByUsername = function(username, callback) {
