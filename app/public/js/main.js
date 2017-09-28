@@ -57,7 +57,7 @@ xhrPerformance.onreadystatechange = function() {
     if (xhrPerformance.readyState == 4) {
         data = xhrPerformance.responseText;
         data = JSON.parse(data);
-        bar_chart(data["barData"], 'trigram','Type','Frequency');
+        bar_chart(data["barData"], 'trigram','User','Frequency');
     }
 }
 xhrPerformance.open('POST', 'fetchdata', true);
@@ -81,15 +81,22 @@ function timeseries(data,bind,x_label,y_label){
           //  ['data2', 130, 340, 200, 500, 250, 350]
         //]
     },
+
     axis: {
         x: {
             type: 'timeseries',
             tick: {
                 format: '%Y-%m-%d',
                 rotate: 75,
+                label: "Day",
                 fit: false,
                 multiline: false
-            }
+            },
+            y: {
+                label: "Overall activity count",
+                min: 0,
+                padding: { top: 10, bottom: 0 }
+            },
         }
     }
 });
