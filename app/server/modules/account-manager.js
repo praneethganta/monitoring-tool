@@ -98,7 +98,6 @@ exports.fetchData = function(username,userselect,callback)
   for (var i = 0; i < values.length; i++){
     corpus = corpus + values[i]["activity"];
   }
-  //console.log(corpus);
   var PythonShell = require('python-shell');
   var options = {
     mode: 'text',
@@ -107,7 +106,6 @@ exports.fetchData = function(username,userselect,callback)
 
 PythonShell.run('./app/server/modules/wordFrequencies.py', options, function (err, results) {
     if (err) throw err;
-    // results is an array consisting of messages collected during execution
     words = JSON.parse(results[0]);
     wordList = [];
     for (var key in words){
