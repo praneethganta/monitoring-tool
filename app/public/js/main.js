@@ -55,7 +55,7 @@ function timeseries(data,bind,x_label,y_label){
         columns: data
     },
     zoom: {
-  enabled: false
+  enabled: true
 },
     axis: {
         x: {
