@@ -1,0 +1,20 @@
+{
+  "name": "behavioral-monitoring-tool",
+  "description": "A template which helps user to login and view his login activity",
+  "main": "app.js",
+  "authors": [
+    "Praneeth Ganta"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/praneethganta/monitoring-tool",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jqcloud2": "^2.0.3"
+  }
+}

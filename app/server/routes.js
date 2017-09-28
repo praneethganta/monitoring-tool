@@ -48,10 +48,31 @@ module.exports = function(app) {
 
 // logged-in user's homepage service which helps in viewing user's profile and login history  //
 
+
+app.post('/fetchdata', function(req,res) {
+	console.log(req.body);
+	if (req.body.chart == "wordcloud"){
+		wordList = AM.fetchData(req.cookies.user,req.body.userselect,  function(wordList){
+				res.send(JSON.stringify({"words":wordList}));
+		});
+	}
+	else if (req.body.chart == "timeseries") {
+		seriesData = AM.fetchSeriesData(req.cookies.user,function(seriesData){
+				res.send(JSON.stringify({"seriesData" : seriesData}));
+		});
+	}
+	else if (req.body.chart == "perfomanceBar") {
+		barData = AM.fetchPerfomanceData(req.cookies.user,function(barData){
+				res.send(JSON.stringify({"barData" : barData}));
+		});
+	}
+});
+
+
 	app.get('/home', function(req, res) {
 		if (req.cookies.user == undefined || req.cookies.pass == undefined){
 			res.redirect('/');
-		}	else{
+		}	else {
 			var activity;
 			var tableCode= "";
 			var name = ""
