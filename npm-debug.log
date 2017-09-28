@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/pganta/.nvm/versions/node/v5.0.0/bin/node',
+1 verbose cli   '/home/pganta/.nvm/versions/node/v5.0.0/bin/npm',
+1 verbose cli   'start' ]
+2 info using npm@3.3.6
+3 info using node@v5.0.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle behavioral-monitoring-tool@1.5.0~prestart: behavioral-monitoring-tool@1.5.0
+6 silly lifecycle behavioral-monitoring-tool@1.5.0~prestart: no script for prestart, continuing
+7 info lifecycle behavioral-monitoring-tool@1.5.0~start: behavioral-monitoring-tool@1.5.0
+8 verbose lifecycle behavioral-monitoring-tool@1.5.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle behavioral-monitoring-tool@1.5.0~start: PATH: /home/pganta/.nvm/versions/node/v5.0.0/lib/node_modules/npm/bin/node-gyp-bin:/home/pganta/Documents/projects/monitoring-tool/node_modules/.bin:/home/pganta/.nvm/versions/node/v5.0.0/bin:/home/pganta/bin:/home/pganta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+10 verbose lifecycle behavioral-monitoring-tool@1.5.0~start: CWD: /home/pganta/Documents/projects/monitoring-tool
+11 silly lifecycle behavioral-monitoring-tool@1.5.0~start: Args: [ '-c', 'node app.js' ]
+12 silly lifecycle behavioral-monitoring-tool@1.5.0~start: Returned: code: 1  signal: null
+13 info lifecycle behavioral-monitoring-tool@1.5.0~start: Failed to exec start script
+14 verbose stack Error: behavioral-monitoring-tool@1.5.0 start: `node app.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/home/pganta/.nvm/versions/node/v5.0.0/lib/node_modules/npm/lib/utils/lifecycle.js:233:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (/home/pganta/.nvm/versions/node/v5.0.0/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:818:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid behavioral-monitoring-tool@1.5.0
+16 verbose cwd /home/pganta/Documents/projects/monitoring-tool
+17 error Linux 4.10.0-35-generic
+18 error argv "/home/pganta/.nvm/versions/node/v5.0.0/bin/node" "/home/pganta/.nvm/versions/node/v5.0.0/bin/npm" "start"
+19 error node v5.0.0
+20 error npm  v3.3.6
+21 error code ELIFECYCLE
+22 error behavioral-monitoring-tool@1.5.0 start: `node app.js`
+22 error Exit status 1
+23 error Failed at the behavioral-monitoring-tool@1.5.0 start script 'node app.js'.
+23 error This is most likely a problem with the behavioral-monitoring-tool package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node app.js
+23 error You can get their info via:
+23 error     npm owner ls behavioral-monitoring-tool
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
