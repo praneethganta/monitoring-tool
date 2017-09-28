@@ -85,19 +85,19 @@ function timeseries(data,bind,x_label,y_label){
     axis: {
         x: {
             type: 'timeseries',
+            label: "Day",
             tick: {
                 format: '%Y-%m-%d',
                 rotate: 75,
-                label: "Day",
                 fit: false,
                 multiline: false
-            },
+            }
+          },
             y: {
                 label: "Overall activity count",
                 min: 0,
                 padding: { top: 10, bottom: 0 }
-            },
-        }
+            }
     }
 });
 }
