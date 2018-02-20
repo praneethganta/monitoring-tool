@@ -17,4 +17,4 @@
  * c3.js
  
 ### Chrome Extension:
-  Ext.zip
+  * ext.zip
