@@ -1,7 +1,7 @@
 // DB server configuration //
 const { Pool, Client } = require('pg');
 var moment = require('moment');
-const connectionString = 'postgres://ec2-18-220-124-182.us-east-2.compute.amazonaws.com:5432/postgres';
+const connectionString = ''; // Your Postgres Server API endpopint here
 const client = new Client({
   user: 'postgres',
   host: 'ec2-18-220-124-182.us-east-2.compute.amazonaws.com',
